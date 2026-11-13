@@ -1,0 +1,55 @@
+{
+  "name": "BuoyNode",
+  "type": "object",
+  "properties": {
+    "buoy_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "battery": {
+      "type": "number"
+    },
+    "connection_status": {
+      "type": "string",
+      "enum": [
+        "online",
+        "offline",
+        "degraded"
+      ],
+      "default": "online"
+    },
+    "signal_strength": {
+      "type": "number",
+      "description": "Radio signal strength percentage"
+    },
+    "acoustic_detection": {
+      "type": "string",
+      "enum": [
+        "listening",
+        "signal",
+        "idle"
+      ],
+      "default": "listening"
+    },
+    "last_transmission": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "connected_swimmers": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "buoy_id",
+    "name"
+  ]
+}

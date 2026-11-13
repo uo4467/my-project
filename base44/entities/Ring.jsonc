@@ -1,0 +1,43 @@
+{
+  "name": "Ring",
+  "type": "object",
+  "properties": {
+    "ring_id": {
+      "type": "string",
+      "description": "Hardware identifier, e.g. MNQ-R-0142"
+    },
+    "assigned_user_name": {
+      "type": "string"
+    },
+    "assigned_user_email": {
+      "type": "string"
+    },
+    "connection_status": {
+      "type": "string",
+      "enum": [
+        "connected",
+        "disconnected",
+        "charging"
+      ],
+      "default": "connected"
+    },
+    "battery": {
+      "type": "number",
+      "description": "Battery percentage 0-100"
+    },
+    "firmware_version": {
+      "type": "string"
+    },
+    "last_sync": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "model": {
+      "type": "string",
+      "default": "Munqith Titanium Gen-1 Prototype"
+    }
+  },
+  "required": [
+    "ring_id"
+  ]
+}

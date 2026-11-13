@@ -1,0 +1,88 @@
+{
+  "name": "EmergencyIncident",
+  "type": "object",
+  "properties": {
+    "incident_id": {
+      "type": "string"
+    },
+    "swimmer_id": {
+      "type": "string"
+    },
+    "swimmer_name": {
+      "type": "string"
+    },
+    "incident_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "elevated",
+        "distress",
+        "sos"
+      ]
+    },
+    "trigger_reason": {
+      "type": "string"
+    },
+    "heart_rate": {
+      "type": "number"
+    },
+    "spo2": {
+      "type": "number"
+    },
+    "depth": {
+      "type": "number"
+    },
+    "submersion_seconds": {
+      "type": "number"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "buoy_id": {
+      "type": "string"
+    },
+    "acknowledged": {
+      "type": "boolean",
+      "default": false
+    },
+    "acknowledged_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lifeguard_assigned": {
+      "type": "string"
+    },
+    "dispatched_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "resolved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "acknowledged",
+        "dispatched",
+        "resolved"
+      ],
+      "default": "active"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "incident_id",
+    "swimmer_id",
+    "severity"
+  ]
+}

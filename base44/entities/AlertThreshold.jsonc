@@ -1,0 +1,38 @@
+{
+  "name": "AlertThreshold",
+  "type": "object",
+  "properties": {
+    "hr_high": {
+      "type": "number",
+      "default": 140,
+      "description": "Heart rate threshold in BPM"
+    },
+    "spo2_low": {
+      "type": "number",
+      "default": 90,
+      "description": "Minimum SpO2 percentage"
+    },
+    "submersion_seconds": {
+      "type": "number",
+      "default": 30,
+      "description": "Prolonged submersion threshold in seconds"
+    },
+    "hrv_low": {
+      "type": "number",
+      "default": 20,
+      "description": "Low HRV indicator"
+    },
+    "updated_by": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "hr_high",
+    "spo2_low",
+    "submersion_seconds"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "SwimmerSession",
+  "type": "object",
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "swimmer_id": {
+      "type": "string"
+    },
+    "swimmer_name": {
+      "type": "string"
+    },
+    "user_email": {
+      "type": "string"
+    },
+    "ring_id": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "water_safety_mode": {
+      "type": "boolean",
+      "default": true
+    },
+    "session_status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "completed",
+        "aborted"
+      ],
+      "default": "completed"
+    },
+    "max_depth": {
+      "type": "number"
+    },
+    "avg_heart_rate": {
+      "type": "number"
+    },
+    "min_spo2": {
+      "type": "number"
+    },
+    "alerts_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "session_id",
+    "swimmer_id"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "SensorReading",
+  "type": "object",
+  "properties": {
+    "ring_id": {
+      "type": "string"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "heart_rate": {
+      "type": "number"
+    },
+    "hrv": {
+      "type": "number"
+    },
+    "spo2": {
+      "type": "number"
+    },
+    "skin_temperature": {
+      "type": "number"
+    },
+    "water_contact": {
+      "type": "boolean",
+      "default": false
+    },
+    "depth": {
+      "type": "number",
+      "description": "Simulated depth in meters"
+    }
+  },
+  "required": [
+    "ring_id",
+    "recorded_at"
+  ]
+}

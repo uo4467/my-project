@@ -1,0 +1,47 @@
+{
+  "name": "Swimmer",
+  "type": "object",
+  "properties": {
+    "swimmer_id": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "full_name_ar": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "zone": {
+      "type": "string",
+      "description": "Monitored beach zone"
+    },
+    "ring_id": {
+      "type": "string"
+    },
+    "safety_status": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "elevated",
+        "distress",
+        "sos",
+        "offline"
+      ],
+      "default": "normal"
+    },
+    "water_safety_mode": {
+      "type": "boolean",
+      "default": false
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "swimmer_id",
+    "full_name"
+  ]
+}
